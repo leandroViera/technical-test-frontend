@@ -1,0 +1,30 @@
+.oval-input-group {
+    display: flex;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.oval-input-group .form-control {
+    border-radius: 50px 0 0 50px;
+}
+
+.oval-input-group .input-group-append .btn {
+    border-radius: 0 50px 50px 0;
+    color: black;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+button.btn.btn-primary {
+    height: 43px;
+}
+
+button.btn.btn-primary {
+    font-weight: bold;
+    margin-right: 20px;
+    ;
+}
+
+#button-search:hover {
+    background-color: #0a53be;
+    color: white;
+}

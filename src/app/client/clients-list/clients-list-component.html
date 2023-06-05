@@ -1,0 +1,33 @@
+<div>
+    <div class="mt-5">
+        <h4>Clients</h4>
+    </div>
+    <br>
+    <table class="table table-bordered border-1 text-center">
+        <thead class="text-center fs-6">
+            <tr>
+                <ng-container *ngFor="let column of ['Shared Key', 'Bussines ID', 'E-mail', 'Phone', 'Data Added']">
+                    <th>
+                        {{column}}
+                    </th>
+                </ng-container>
+                <th class="p-0 align-middle">
+                    <img id="principal_edit_icon" src="assets/images/main_edition_icon.png"
+                        class="img-thumbnail rounded-circle" alt="">
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let client of clients">
+                <td>{{client.sharedKey}}</td>
+                <td>{{client.businessID}}</td>
+                <td>{{client.email}}</td>
+                <td>{{client.phoneNumber}}</td>
+                <td>{{client.dataAdded}}</td>
+                <td>
+                    <div><i class="fa fa-pencil"></i></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
