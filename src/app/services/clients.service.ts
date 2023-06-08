@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Client } from './client/clients-list/client';
+import { Client } from '../models/client.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,8 @@ export class ClientsService {
   constructor(private httpClient: HttpClient) { }
 
   getClients(): Observable<Client[]> {
-    return this.httpClient.get<Client[]>(`${this.baseURL}`);
+    let g = this.httpClient.get<Client[]>(`${this.baseURL}`);
+    return g;
   }
 
 }
