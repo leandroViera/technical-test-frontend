@@ -8,14 +8,21 @@
         </button>
     </div>
     <br>
-    <div class="input-group mb-3 oval-input-group">
-        <input type="text" class="form-control" placeholder="Enter shared key" aria-label="Enter shared key"
-            aria-describedby="button-search">
-        <div class="input-group-append">
-            <button class="btn btn-outline-info" type="button" id="button-search" (click)="getClient()">Search</button>
+    <div class="row">
+        <div class="col-7 col-md-7 col-xs-4">
+            <div class="input-group mb-3 oval-input-group">
+                <input type="text" class="form-control" #clientSearchInput placeholder="Enter shared key"
+                    aria-label="Enter shared key" aria-describedby="button-search">
+                <div class="input-group-append">
+                    <button class="btn" type="button" id="button-search"
+                        (click)="searchClient(clientSearchInput.value)">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-5 col-md-5 col-xs-8">
+            <div class="text-center mt-5 d-inline">
+                <button class="btn btn-primary rounded-border button_advanced_search">Advanced Search</button>
+            </div>
         </div>
     </div>
-    <!-- <div class="text-center mt-5 d-inline">
-        <button class="btn btn-primary rounded-border">Advanced Search</button>
-    </div> -->
 </div>

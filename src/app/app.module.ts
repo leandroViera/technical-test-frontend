@@ -9,7 +9,8 @@ import { ClientActionsComponent } from './components/client/client-actions/clien
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ClientComponent } from './components/client/client.component';
 import { ClientsService } from './services/clients.service';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {HttpClientModule} from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [{ provide: ClientsService }],
   bootstrap: [AppComponent]

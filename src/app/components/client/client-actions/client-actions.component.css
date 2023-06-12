@@ -28,3 +28,7 @@ button.btn.btn-primary {
     background-color: #0a53be;
     color: white;
 }
+
+.button_advanced_search {
+    width: max-content;
+}

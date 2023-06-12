@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-client-actions',
@@ -7,10 +7,18 @@ import { Component } from '@angular/core';
 })
 export class ClientActionsComponent {
 
+  @Output()
+  private clientSearchInputEvent: EventEmitter<string> = new EventEmitter<string>();
 
-    getClient(){
-      
+  searchClient(clientId: string) {
+
+    if (clientId.trim() == "") {
+      return;
     }
+
+    this.clientSearchInputEvent.emit(clientId);
+    
+  }
 
 
 }

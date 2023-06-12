@@ -18,16 +18,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let client of clients">
-                <td>{{client.sharedKey}}</td>
-                <td>{{client.businessID}}</td>
-                <td>{{client.email}}</td>
-                <td>{{client.phoneNumber}}</td>
-                <td>{{client.dataAdded}}</td>
-                <td>
-                    <div><i class="fa fa-pencil"></i></div>
-                </td>
-            </tr>
+            <ng-container *ngIf="clients && clients.length > 0">
+                <tr *ngFor="let client of clients">
+                    <td>{{client.sharedKey}}</td>
+                    <td>{{client.businessID}}</td>
+                    <td>{{client.email}}</td>
+                    <td>{{client.phoneNumber}}</td>
+                    <td>{{client.dataAdded}}</td>
+                    <td>
+                        <div><i class="fa fa-pencil"></i></div>
+                    </td>
+                </tr>
+            </ng-container>
         </tbody>
     </table>
 </div>

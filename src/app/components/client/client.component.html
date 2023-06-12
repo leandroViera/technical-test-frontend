@@ -1,8 +1,8 @@
 <div class="client_actions_container">
-    <div class="col-lg-5 col-lg-offset-7">
-        <app-client-actions></app-client-actions>
+    <div class="col-md-10 col-lg-8 col-md-offset-2 col-lg-offset-4">
+        <app-client-actions (clientSearchInputEvent)="getClient($event)"></app-client-actions>
     </div>
 </div>
 <div>
-    <app-clients-list-component></app-clients-list-component>
+    <app-clients-list-component [clients]="client"></app-clients-list-component>
 </div>

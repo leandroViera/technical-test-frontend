@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClientActionsComponent } from './client/client-actions.component';
+import { ClientActionsComponent } from './client-actions.component';
 
 describe('ClientActionsComponent', () => {
   let component: ClientActionsComponent;
