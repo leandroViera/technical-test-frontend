@@ -20,7 +20,7 @@ export class ClientComponent {
     this.clientsService.getClientById(clientId).subscribe((client) => {
 
       if (client.toString().trim() !== "") {
-        this.client = [client];
+        this.client = client;
         return;
       }
 
